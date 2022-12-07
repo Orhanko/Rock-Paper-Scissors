@@ -1,1 +1,3 @@
 # Rock-Paper-Scissors
+
+Very simple but yet fun game. In first version, browser will ask you for your choice "rock", "paper" or "scissors", but I am working on simpler solution where you will have available on browser three same options in the form of blocks. When you choose one of those otpions, computer will randomly generate its case. Paper wins rock but looses from scissors, scissors wins paper, but looses from rock and finally rock wins scissors but looses from paper. Result of current round will be instantly displayed on the screen. This game is playing until some of players get the result of 5 won rounds, and after every round has been played, you will get info about current round. You have option to reset current result at any time. 
