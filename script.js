@@ -47,24 +47,22 @@ function homeResult(){
 
 
 
-function oneRound() {
+function oneRound(userChoice) {
     
     if(userCounter<5 && computerCounter<5){
     let computerChoice = random();
     console.log(computerChoice)
     
-    let userChoice = ""
+    /*let userChoice = ""
 
-    
-    
     while(userChoice != "paper" && userChoice != "rock" && userChoice != "scissors"){
         userChoice = prompt("Please, make a choice!")
     }
-    let userChoiceFinal = userChoice.toLowerCase();
+    let userChoiceFinal = userChoice.toLowerCase();*/
     
-    switch(userChoiceFinal){
+    switch(userChoice){
         case "scissors":
-            if (userChoiceFinal === computerChoice){
+            if (userChoice === computerChoice){
                 console.log("Same choice!");
                 resultOutput = "This round is a Tie. The result remains the same"
                 divResultOutput.textContent = resultOutput
@@ -87,7 +85,7 @@ function oneRound() {
             }
             break;
         case "paper":
-            if (userChoiceFinal === computerChoice){
+            if (userChoice === computerChoice){
                 console.log("Same choice");
                 resultOutput = "This round is a Tie. The result remains the same"
                 divResultOutput.textContent = resultOutput
@@ -110,7 +108,7 @@ function oneRound() {
             break;
 
         case "rock":
-            if (userChoiceFinal === computerChoice){
+            if (userChoice === computerChoice){
                 console.log("Same choice!");
                 resultOutput = "This round is a Tie. The result remains the same"
                 divResultOutput.textContent = resultOutput
@@ -152,17 +150,30 @@ function resetResult(){
     userCounter = 0;
     homeResult();
     const home = document.querySelector(".homeResult")
-    home.style.backgroundColor = "#b5cdcf"
+    home.style.backgroundColor = "#5AC5C6"
     home.style.border = "none"
     computerCounter = 0;
     guestResult();
     const guest = document.querySelector(".guestResult")
-    guest.style.backgroundColor = "#b5cdcf"
+    guest.style.backgroundColor = "#5AC5C6"
     guest.style.border = "none"
-    
     divResultOutput.textContent = ""
 }
+const divPaper = document.querySelector(".paper")
+const divScissors = document.querySelector(".scissors")
+const divRock = document.querySelector(".rock")
 
+divPaper.addEventListener("click", () =>{
+    let paper = "paper"
+    oneRound(paper)
+})
 
+divScissors.addEventListener("click", () =>{
+    let scissors = "scissors"
+    oneRound(scissors)
+})
 
-
+divRock.addEventListener("click", () =>{
+    let rock = "rock"
+    oneRound(rock)
+})

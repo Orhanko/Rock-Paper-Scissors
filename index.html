@@ -10,8 +10,11 @@
     
 </head>
 <body>
-    <div class="title">
-        <h1>Rock Paper Scissors</h1>
+    <div class="title-container">
+        <div class="logo">
+            <img src="images\logo\rock-paper-scissors.png" style="width: 100px;" style="height: 100px;" alt="logo">
+        </div>
+        <div>Rock Paper Scissors</div>
     </div>
 
     <div class= "result-container">
@@ -19,13 +22,13 @@
         <div class="result">
 
             <div class="home-container">
-                <div class="homeResult" style="background-color: #b5cdcf;">0</div>
+                <div class="homeResult" style="background-color: #5AC5C6">0</div>
             </div>
     
             <div class="colon">:</div>
     
             <div class="guest-container">
-                <div class="guestResult" style="background-color: #b5cdcf;">0</div>
+                <div class="guestResult" style="background-color: #5AC5C6">0</div>
     
             </div>
             
@@ -34,19 +37,28 @@
         
     <div class="text"></div>
 
+
+
     </div>
 
-<div class="buttons-container">
+    <div class="RPS-Buttons">
 
-    <div class="buttons">
+        <div class="RPS paper">
+            <img src="images\Buttons\paper.svg" style="width: 55px;" style="height: 55 px;" alt="paper">
+        </div>
+        <div class="RPS scissors">
+            <img src="images\Buttons\scissors.svg" style="width: 55px;" style="height: 55 px;" alt="scissors">
+        </div>
+        <div class="RPS rock">
+            <img src="images\Buttons\rock.svg" style="width: 55px;" style="height: 55 px;" alt="rock">
+        </div>
 
-        <button class="play" onclick=oneRound()>Play Round</button>
-        
-        <button class="reset" onclick=resetResult() >Reset Result</button>
-    
+
     </div>
 
-</div>
+    <div class="buttons-container">
+        <button class="resetButton" onclick=resetResult()>Reset Result</button>
+    </div>
     
     
 </body>
